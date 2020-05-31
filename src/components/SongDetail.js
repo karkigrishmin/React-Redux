@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
+import "../SongList.css";
 
 const SongDetail = ({ song }) => {
-    //conditional rendering
+  //conditional rendering
   if (!song) {
-    return <div>Select a song</div>;
+    return <div className="details">Select a song</div>;
   }
 
   return (
-    <div>
+    <div className="details">
       <h3>Details for:</h3>
       <p>
         Title: {song.title}
